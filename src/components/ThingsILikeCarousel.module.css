@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Parisienne&display=swap');
+
+.section {
+  box-sizing: border-box;
+  width: 100%; /* Changed from 100vw to prevent horizontal overflow */
+  margin: 0 auto 3rem auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #4B0082;
+  background: transparent;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem 0;
+  text-shadow: 1px 1px 3px rgba(250, 218, 221, 0.8);
+}
+
+.subtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #7c7c7c;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.carousel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px; /* Fits desktop nicely */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  min-height: 380px;
+  overflow-x: visible;
+  padding: 0;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 96vw;
+  background: linear-gradient(135deg, #FFFDD0, #E6E6FA 65%);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(176, 224, 230, 0.6);
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s, transform 0.4s;
+  user-select: none;
+  justify-content: center;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+  animation: fadeInSlideUp 0.6s ease;
+  z-index: 2;
+}
+
+.inactive {
+  z-index: 1;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.imageWrapper {
+  flex: 1 0 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(240, 230, 140, 0.4);
+  min-width: 120px;
+  background: transparent;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  max-height: 200px;
+  object-fit: contain;
+  user-select: none;
+  margin: 0 auto;
+}
+
+.textContent {
+  flex: 1 1 55%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-family: 'Parisienne', cursive;
+  font-size: 1.8rem;
+  margin: 0.3rem 0 0.5rem 0;
+}
+
+.cardSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #7c7c7c;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+.cardDescription {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+/* Navigation buttons */
+.navButton {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F0E68C;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 0.5rem;
+  outline-offset: 4px;
+  position: relative;
+  z-index: 5;
+  transition: color 0.3s;
+}
+
+.navButton:hover,
+.navButton:focus {
+  color: #FADADD;
+  outline: none;
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 700px) {
+  .section {
+    padding: 0 0.2rem;
+    width: 100%;
+  }
+  .carousel {
+    max-width: 98vw;
+    min-height: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    position: static !important;
+    left: unset !important;
+    top: unset !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: scale(1) !important;
+    width: 98vw;
+    max-width: 98vw;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0.7rem auto;
+    animation: fadeInMobile 0.8s ease;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  @keyframes fadeInMobile {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .imageWrapper {
+    min-width: 70px;
+    margin: 0 auto 0.5rem auto;
+  }
+  .image {
+    max-width: 90px;
+    max-height: 100px;
+  }
+  .textContent {
+    text-align: center;
+    flex: none;
+    margin: 0 auto;
+  }
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+  .cardSubtitle {
+    font-size: 0.95rem;
+  }
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+  .navButton {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond&family=Montserrat&display=swap');
+
+.header {
+  background: linear-gradient(90deg, #FADADD, #E6E6FA, #FFFDD0, #B0E0E6);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.nav {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-wrap: wrap;
+}
+
+.navList li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.navLink {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #F0E68C;
+  outline: none;
+}
+
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  color: #a3a3a3;
+  margin-top: 0.25rem;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Parisienne', cursive;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+.flourishLeft,
+.flourishRight {
+  font-size: 2.5rem;
+  color: #FADADD;
+  animation: float 6s ease-in-out infinite;
+  user-select: none;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #4B0082;
+  text-shadow: 2px 2px 8px rgba(250, 218, 221, 0.6);
+  margin: 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.englishSubheading {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #7c7c7c;
+  margin-top: 0.3rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15%); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navList {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+  .flourishLeft,
+  .flourishRight {
+    font-size: 2rem;
+  }
+}

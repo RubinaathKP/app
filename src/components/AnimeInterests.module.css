@@ -1,0 +1,49 @@
+.container {
+  max-width: 800px;
+  margin: 4rem auto 6rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #4b0082;
+}
+
+.title {
+  font-family: 'Parisienne', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #7c7c7c;
+}
+
+.imageWrapper {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(250, 218, 221, 0.6);
+  max-height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  max-width: 400px; /* Prevents overstretching on large screens */
+}
+
+/* Larger size for bigger desktop screens */
+@media (min-width: 1024px) {
+  .image {
+    max-width: 500px;
+  }
+}

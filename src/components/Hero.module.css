@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Parisienne&display=swap');
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #FADADD, #E6E6FA, #FFFDD0, #B0E0E6);
+  min-height: 60vh;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #4B0082;
+  overflow: hidden;
+}
+
+.mainMessage {
+  font-family: 'Parisienne', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(250, 218, 221, 0.7);
+  max-width: 90%;
+  position: relative;
+  z-index: 1;
+}
+
+.subheading {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #7c7c7c;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #5a5656dd;
+  max-width: 80%;
+  z-index: 1;
+}
+
+.floatingElement {
+  position: absolute;
+  font-size: 2.5rem;
+  animation: floatUpDown 6s ease-in-out infinite;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20%); }
+}
+
+.ageBadge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FADADD, #E6E6FA);
+  padding: 0.75rem 2rem;
+  border-radius: 3rem;
+  box-shadow: 0 8px 15px rgba(240, 230, 140, 0.5);
+  color: #4B0082;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    padding: 5rem 1.5rem 3rem;
+  }
+  .mainMessage {
+    font-size: 3rem;
+  }
+  .subtitle {
+    max-width: 90%;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.2rem 2.5rem;
+  }
+  .mainMessage {
+    font-size: 2.5rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .floatingElement {
+    font-size: 2rem;
+  }
+  .ageBadge {
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+  .mainMessage {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .subheading {
+    font-size: 0.9rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .ageBadge {
+    font-size: 1.5rem;
+    padding: 0.4rem 1rem;
+  }
+  .floatingElement {
+    font-size: 1.5rem;
+  }
+}
+/* Mobile Layout Adjustment */
+@media (max-width: 480px) {
+
+  /* Reorder elements: Show main text first, then subtitle, then age badge */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainMessage {
+    order: 1;
+  }
+
+  .subtitle {
+    order: 2;
+    margin-bottom: 1.5rem;
+  }
+
+  .ageBadge {
+    order: 3;
+    font-size: 1.3rem;     /* Smaller */
+    padding: 0.4rem 1rem;
+    margin-top: 0.5rem;    /* Adds little spacing */
+    align-self: center;    /* Ensures it's centered */
+  }
+}
+/* Extra Small Phones (<=360px) */
+@media (max-width: 360px) {
+  .hero { padding: 2.5rem 0.8rem 1.8rem; }
+  .mainMessage { font-size: 1.7rem; line-height: 1.2; }
+  .subtitle { font-size: 0.9rem; margin-bottom: 1rem; }
+  .ageBadge {
+    order: 3;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.8rem;
+    margin-top: 0.4rem;
+    align-self: center;
+  }
+  .floatingElement { font-size: 1.2rem; }
+}
+
+/* Small Phones (<=400px) */
+@media (max-width: 400px) {
+  .hero { padding: 3rem 1rem 2rem; }
+  .mainMessage { font-size: 2rem; }
+  .subtitle { font-size: 1rem; }
+  .ageBadge {
+    order: 3;
+    font-size: 1.2rem;
+    padding: 0.35rem 1rem;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+  .floatingElement { font-size: 1.4rem; }
+}
+
+/* Medium Phones (<=480px) */
+@media (max-width: 480px) {
+  .hero { display: flex; flex-direction: column; align-items: center; }
+  .mainMessage { order: 1; font-size: 2.2rem; }
+  .subtitle { order: 2; font-size: 1.1rem; margin-bottom: 1.2rem; }
+  .ageBadge {
+    order: 3;
+    font-size: 1.3rem;
+    padding: 0.4rem 1rem;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+  .floatingElement { font-size: 1.5rem; }
+}
+
+/* Large Phones / Phablets (<=600px) */
+@media (max-width: 600px) {
+  .hero { padding: 4rem 1.2rem 2.5rem; }
+  .mainMessage { font-size: 2.6rem; }
+  .subtitle { font-size: 1.2rem; }
+  .ageBadge {
+    order: 3;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.3rem;
+    margin-top: 0.6rem;
+    align-self: center;
+  }
+  .floatingElement { font-size: 1.8rem; }
+}
