@@ -1,0 +1,7 @@
+name = "anime-birthday-project"
+compatibility_date = "2025-10-02"
+type = "webpack" # or "javascript"
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
