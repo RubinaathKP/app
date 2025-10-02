@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AnimeInterests.module.css';
-import anime from './anime.png'// Adjust to the actual image path
+import anime from './anime.png';
 
 function Anime() {
   return (
@@ -11,7 +11,7 @@ function Anime() {
       </p>
       <div className={styles.imageWrapper}>
         <img
-          src={anime}// Adjust to the actual image path
+          src={anime}
           alt="She celebrating her birthday with Naruto, Miraculous, and Demon Slayer characters"
           className={styles.image}
           loading="lazy"

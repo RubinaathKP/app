@@ -1,9 +1,0 @@
-{
-  "name": "anime-birthday-app",
-  "main": "",
-  "compatibility_date": "2025-10-02",
-  "site": {
-    "bucket": "./dist",
-    "entry-point": "workers-site"
-  }
-}
