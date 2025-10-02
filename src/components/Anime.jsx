@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './AnimeInterests.module.css';
 import anime from './anime.png'// Adjust to the actual image path
 
-function AnimeInterests() {
+function Anime() {
   return (
     <section className={styles.container} aria-label="Anime Interests Celebration">
       <h2 className={styles.title}>Her Anime Celebration</h2>
@@ -21,4 +21,4 @@ function AnimeInterests() {
   );
 }
 
-export default AnimeInterests;
+export default Anime;

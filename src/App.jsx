@@ -5,7 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ThingsILikeCarousel from './components/ThingsILikeCarousel.jsx'
-import AnimeInterests from './components/Animeinterests.jsx'
+import Anime from './components/Anime.jsx';
 function App() {
 
   return (
@@ -13,7 +13,7 @@ function App() {
     <Header />
     <Hero />
     <ThingsILikeCarousel />
-    <AnimeInterests />
+    <Anime />
     </>
   )
 }
